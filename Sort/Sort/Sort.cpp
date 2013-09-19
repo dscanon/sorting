@@ -77,7 +77,8 @@ void merge(T *a, int left, int endleft, int right, int endright)
 	cout << "Merge" << endl;
 	printArray(a,left,endleft);
 	printArray(a,right,endright);
-	int c[10];
+	int size = (endright-left)+1;
+	int *c = new int[size];
 	int numc = 0;
 	while(left <= endleft && right <= endright)
 	{
@@ -113,6 +114,7 @@ void merge(T *a, int left, int endleft, int right, int endright)
 	}
 	printArray(a,left,endright);
 	cout << "------------------------"<< endl;
+	delete [] c;
 }
 
 template<class T>
