@@ -93,24 +93,18 @@ void merge(T *a, int left, int endleft, int right, int endright)
 		}
 		numc++;
 	}
-	if(left<=endleft)
-	{
 		while(left<=endleft)
 		{
 			c[numc] = a[left];
 			numc++;
 			left++;
 		}
-	}
-	if(right<=endright)
-	{
 		while(right<=endright)
 		{
 			c[numc] = a[right];
 			numc++;
 			right++;
 		}
-	}
 	int j = 0;
 	for(int i = templeft; i<=endright; i++)
 	{
